@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+    <head> 
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>PROFILEDSKIN-ALPHA-TESTER</title>
+
+        <style type="text/css">
+            .marginPadding{
+                margin: 0;
+                padding: 0;
+            }
+
+            #bg {
+                height:100vh;
+                width:100%;
+                background-size:cover;
+                }
+
+            #entryBox {
+                height: 200px;
+                width: 400px;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+            #resultBox{
+                height: 150px;
+                width: 400px;
+                position: absolute;
+                top: 300px;
+                left: 50px;
+            }
+
+            #rightBox{
+                height: 540px;
+                width: 400px;
+                position: absolute;
+                top: 50px;
+                right: 50px;
+            }
+            .Box{
+                background-color: rgba(0,100,0,0.6);
+                margin: 0;
+                padding: 0;
+                border-radius: 15px;
+                border:2px solid white;
+                text-align:center;
+                color:white;
+                font-size: 1.5em;
+            }
+
+            #sampleImg{
+                width: 350px;
+                height: 350px;
+            }
+            .instruct{
+                font-size: 0.7em;
+                text-align:left;
+            }
+            #PSlogo{
+                position: absolute;
+                top: 500px;
+                left: 50px;
+                height: 100px;
+                width: 100px;
+            }
+        </style>
+            
+    </head>
+    <body class="marginPadding">
+        <div>
+            <img src="images/footprint-moon.jpg" id="bg" class="marginPadding" alt="">
+            <div id="entryBox" class="Box">
+                <p><h3>Upload Foot Image</h3></p>
+                <form action="upload.php" method="post" enctype="multipart/form-data">
+                    Select image to upload:<br/>
+                    <input type="file" name="fileToUpload" id="fileToUpload">
+                    <input type="submit" value="Upload Image" name="submit">
+                </form>
+            </div>
+
+            <div id="resultBox" class="Box">
+                <p><h3>Size of Foot</h3></p>
+            </div>
+
+
+            <div id="rightBox" class="Box">
+                <p><h3>Sample Foot Image</h3></p>
+                <p class="instruct">&nbsp 1. Complete foot should be visible (Toes to Ankle)<br/>
+                 &nbsp 2. Upload Image in same orientation as below<br/>
+                 &nbsp 3. Place 1 rupee coin as shown </p>
+                <img src="images/foot.jpg" id="sampleImg" alt="">
+                
+            </div>
+
+            <div>
+                <img src="images/PSlogo.png" id="PSlogo" alt="">
+            </div>
+
+
+        </div>
+    </body>
+</html>
